@@ -8,9 +8,9 @@ const nav5 = document.getElementById('nav-5');
 
 const navItems = [nav1, nav2, nav3, nav4, nav5];
 
-// Control Navigation Animation
+// Helper function, control Navigation Animation
 function navAnimation(direction1, direction2) {
-    //local var & index
+    // Local var & index
     navItems.forEach((nav, i) => {
         //counter start 0, so need to +1 to start with 1
       nav.classList.replace(`slide-${direction1}-${i + 1}`, `slide-${direction2}-${i + 1}`);
@@ -40,7 +40,7 @@ function toggleNav() {
 
 // Event Listeners
 menuBars.addEventListener('click', toggleNav);
-// Get into the section, hide hav
+// Event Listeners. Get into the section, hide hav
 navItems.forEach((nav) => {
     nav.addEventListener('click', toggleNav);
   });
